@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :verbs, only: [:index]
       resources :adjectives, only: [:index]
       resources :nouns, only: [:index]
+      resources :users, only: [:create]
     end
   end
 end
