@@ -1,0 +1,3 @@
+class Noun < ApplicationRecord
+  
+end

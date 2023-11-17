@@ -1,0 +1,3 @@
+class Verb < ApplicationRecord
+  
+end
