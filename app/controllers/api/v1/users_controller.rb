@@ -5,7 +5,7 @@ class Api::V1::UsersController < ApplicationController
     if user.save
       render json: UserInfoSerializer.new(UserInfo.new(user))
     else
-      render json: {error: "#{user.errors.full_messages}"}
+      render json: {error: "#{user.errors.full_messages.join(',')}"}
     end
   end
 
