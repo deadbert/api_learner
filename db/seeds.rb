@@ -7,31 +7,35 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+# Array of unique verbs
 verbs = [
   "run", "jump", "sing", "dance", "write", "code", "swim", "play", "laugh", "think",
   "eat", "sleep", "study", "climb", "explore", "travel", "teach", "learn", "listen", "create",
   "imagine", "read", "cook", "drive", "cycle", "draw", "paint", "ski", "chat", "hike",
-  "meditate", "build", "solve", "plant", "design", "play", "compose", "analyze", "exercise", "volunteer", "party",
-  "program", "surf", "photograph", "film", "code", "collaborate", "innovate", "adapt", "jog", "run",
-  "race", "whistle", "mediate", "contribute", "design", "enjoy", "discover", "investigate", "play", "assemble",
-  "jumpstart", "initiate", "orchestrate", "organize", "navigate", "render", "sculpt", "question", "unwind", "celebrate",
-  "harmonize", "medicate", "motivate", "recreate", "validate", "whisper", "zip", "clap", "decide", "shout",
-  "mingle", "sprint", "twirl", "applaud", "cherish", "hug", "savor", "taste", "applaud", "juggle",
-  "navigate", "bounce", "compose", "plan", "swirl", "ruminate", "sketch", "harvest", "weave", "be"
-]
+  "meditate", "build", "solve", "plant", "design", "compose", "analyze", "exercise", "volunteer", "party",
+  "program", "surf", "photograph", "film", "collaborate", "innovate", "adapt", "jog", "race",
+  "whistle", "mediate", "contribute", "enjoy", "discover", "investigate", "assemble", "jumpstart", "initiate",
+  "orchestrate", "organize", "navigate", "render", "sculpt", "question", "unwind", "celebrate", "harmonize",
+  "medicate", "motivate", "recreate", "validate", "whisper", "zip", "clap", "decide", "shout",
+  "mingle", "sprint", "twirl", "applaud", "cherish", "hug", "savor", "taste", "juggle", "bounce",
+  "plan", "swirl", "ruminate", "sketch", "harvest", "weave", "be"
+].uniq
 
+# Array of unique nouns
 nouns = [
   "dog", "cat", "book", "friend", "tree", "computer", "beach", "city", "mountain", "dream",
   "car", "bike", "camera", "cup", "song", "flower", "river", "ocean", "cloud", "sun",
   "moon", "star", "key", "door", "pen", "paper", "guitar", "notebook", "island", "mirror",
   "rainbow", "chocolate", "coffee", "hat", "shoes", "umbrella", "bird", "fish", "apple", "kite",
   "sky", "sand", "shell", "sunset", "fire", "candle", "pillow", "smile", "laughter", "kiss",
-  "wave", "bridge", "road", "train", "plane", "ship", "castle", "dream", "idea", "mind",
-  "heart", "time", "space", "silence", "whisper", "echo", "shadow", "light", "color", "texture",
-  "pattern", "rhythm", "harmony", "beauty", "joy", "peace", "love", "freedom", "serenity", "reflection",
-  "moment", "experience", "journey", "destination", "adventure", "memory", "inspiration", "passion", "purpose", "balance"
-]
+  "wave", "bridge", "road", "train", "plane", "ship", "castle", "idea", "mind", "heart",
+  "time", "space", "silence", "whisper", "echo", "shadow", "light", "color", "texture", "pattern",
+  "rhythm", "harmony", "beauty", "joy", "peace", "love", "freedom", "serenity", "reflection", "moment",
+  "experience", "journey", "destination", "adventure", "memory", "inspiration", "passion", "purpose", "balance"
+].uniq
 
+# Array of unique adjectives
 adjectives = [
   "happy", "bright", "creative", "colorful", "brilliant", "playful", "swift", "peaceful", "joyful", "serene",
   "vibrant", "lively", "dynamic", "inspiring", "positive", "radiant", "amazing", "fascinating", "exciting", "uplifting",
@@ -43,7 +47,7 @@ adjectives = [
   "balanced", "expressive", "resilient", "flexible", "open-minded", "inventive", "resourceful", "adaptable", "persistent", "tenacious",
   "courageous", "bold", "daring", "spontaneous", "authentic", "wholesome", "empowering", "innovative", "creative", "compassionate",
   "generous", "kind", "loving", "gracious", "insightful", "wise", "intuitive", "sincere", "genuine", "thoughtful"
-]
+].uniq
 
 verbs.each { |verb| Verb.create!(verb: verb)}
 nouns.each { |noun| Noun.create!(noun: noun)}
